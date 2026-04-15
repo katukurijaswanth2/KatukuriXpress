@@ -27,7 +27,7 @@
 
 // export default App
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Products } from "./components/Products";
+import { Products } from "./utilities/Products";
 import { SpecificCard } from "./components/SpecificCard";
 import { SignIn} from "../src/features/authontication/SignIn";
 function App() {

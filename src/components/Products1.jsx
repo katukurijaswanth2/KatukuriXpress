@@ -22,7 +22,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-export const Products = () => {
+export const Products1 = () => {
 
   const navigate = useNavigate();
 
