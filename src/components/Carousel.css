@@ -1,0 +1,252 @@
+/* ==============================
+   Carousel — Organic Market Style
+   ============================== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 0;
+  transition: background-color 0.5s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Subtle brick-wall texture overlay using CSS */
+.carousel-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(200, 190, 180, 0.12) 28px,
+      rgba(200, 190, 180, 0.12) 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(200, 190, 180, 0.08) 60px,
+      rgba(200, 190, 180, 0.08) 62px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Slide content layout ── */
+.carousel-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fadeSlideIn 0.45s ease forwards;
+}
+.fade-out {
+  animation: fadeSlideOut 0.35s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-8px); }
+}
+
+/* ── Left: text ── */
+.carousel-text {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carousel-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.carousel-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.carousel-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 13px 32px;
+  background: #3a8c3f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.carousel-cta:hover {
+  background: #2e7033;
+  transform: translateY(-1px);
+}
+
+.carousel-cta:active {
+  transform: translateY(0);
+}
+
+/* ── Right: image ── */
+.carousel-image-wrap {
+  flex: 0 0 54%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 380px;
+}
+
+.carousel-main-img {
+  width: 100%;
+  max-width: 560px;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+}
+
+/* ── Badge (top-right corner of image area) ── */
+.carousel-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+}
+
+.badge-svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+.badge-leaves {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Nav Buttons ── */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(255,255,255,0.95);
+  border-color: rgba(0,0,0,0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-btn-left  { left: 20px; }
+.carousel-btn-right { right: 20px; }
+
+/* ── Dots ── */
+.carousel-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.carousel-dot.active {
+  background: #3a8c3f;
+  transform: scale(1.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .carousel {
+    height: auto;
+    min-height: 320px;
+    padding-bottom: 40px;
+  }
+
+  .carousel-content {
+    flex-direction: column-reverse;
+    padding: 24px 24px 0;
+    gap: 0;
+  }
+
+  .carousel-image-wrap {
+    height: 200px;
+    flex: none;
+    width: 100%;
+  }
+
+  .carousel-text {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 16px;
+  }
+
+  .carousel-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

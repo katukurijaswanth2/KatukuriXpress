@@ -1,0 +1,115 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 350px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: auto;
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2563eb;
+  position: relative;
+  padding-left: 30px;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+/* Message */
+.message {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Row */
+.flex-row {
+  display: flex;
+  gap: 8px;
+}
+
+/* Inputs */
+label {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 10px 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+label span {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 14px;
+  color: gray;
+  transition: 0.3s;
+}
+
+.input:focus + span,
+.input:valid + span {
+  top: 2px;
+  font-size: 11px;
+  color: #2563eb;
+}
+
+/* Button */
+.submit {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #1d4ed8;
+}
+
+/* Signin text */
+.signin {
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.signin span {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
