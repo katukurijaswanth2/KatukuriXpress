@@ -1,0 +1,33 @@
+
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #888888;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.3px;
+}
+
+.section-divider {
+  width: 40px;
+  height: 2px;
+  background-color: #111111;
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "./Product.css";
+import "./Product1.css";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "./Carousel";
 import { Loader } from "./Loader";
@@ -93,7 +93,7 @@ export const Products1 = () => {
   const isNextDisabled = (page + 1) * limit >= filteredProducts.length;
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className=" mx-auto">
 
       <Carousel />
 

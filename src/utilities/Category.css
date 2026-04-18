@@ -1,0 +1,11 @@
+
+ .CategoryParent{
+    display: flex;
+    padding-left: 10px;
+    width: 100%;
+    background-color: rgb(116, 116, 175);
+  
+ }
+ .inside{
+    background-color: brown;
+ }

@@ -1,0 +1,22 @@
+.category-filter-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #8cf18c; */
+  height: 15
+  rem;
+ 
+}
+
+.category-filter-inner {
+  display: flex;
+width: 80%;
+  justify-content: flex-start;
+  align-items: center;
+  /* display: ; */
+  flex-wrap: wrap;
+  gap: 12px;
+    /* background-color: #8cf18c; */
+ 
+}

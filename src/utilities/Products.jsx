@@ -7,6 +7,9 @@ import { Loader } from "../components/Loader.jsx";
 import { CategoryFilter } from "./CategoryFilter";
 import { ProductGrid } from "./Productgrid.jsx";
 import { Pagination } from "./Pagination";
+import { Products1 } from "../components/Products1.jsx"
+import { Features } from "../components/Features.jsx";
+import DealsOfTheDay from "../pages/Deals/Dealsoftheday.jsx";
 
 export const Products = () => {
   const navigate = useNavigate();
@@ -67,17 +70,19 @@ export const Products = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className=" mx-auto">
+
       <Carousel />
+      <Features />
 
       <CategoryFilter
         categories={allCategories}
         selectedCategories={selectedCategories}
         onToggle={handleCategoryToggle}
       />
-
+      <DealsOfTheDay />
       <ProductGrid products={currentProducts} onBuyNow={handleBuyNow} />
-
+      
       <Pagination
         page={page}
         onPrev={() => setPage((p) => p - 1)}
