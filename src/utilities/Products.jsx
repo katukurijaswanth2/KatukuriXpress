@@ -82,7 +82,7 @@ export const Products = () => {
       />
       <DealsOfTheDay />
       <ProductGrid products={currentProducts} onBuyNow={handleBuyNow} />
-      
+
       <Pagination
         page={page}
         onPrev={() => setPage((p) => p - 1)}
