@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 import "./SpecificCard.css";
+import { SpecificCardSkeleton } from "../features/products/SpecificCardSkeleton";
 
 export const SpecificCard = () => {
   const { id } = useParams();
@@ -52,11 +53,18 @@ export const SpecificCard = () => {
       localStorage.setItem(storageKey, JSON.stringify(cartItem));
       setCartMessage(`"${product.title}" added to cart!`);
     }
+    // i want t o create custom event 
+   // 1. Define the event with a specific name
+const cartUpdateEvent = new CustomEvent("cartUpdated");
+
+// 2. Dispatch (fire) the event on the global window object
+// Announce it on the global webpage here
+window.dispatchEvent(cartUpdateEvent);
 
     setTimeout(() => setCartMessage(""), 2000);
   };
 
-  if (loader) return <Loader />;
+  if (loader) return <SpecificCardSkeleton />;
 
   const originalPrice =
     product.price && product.discountPercentage

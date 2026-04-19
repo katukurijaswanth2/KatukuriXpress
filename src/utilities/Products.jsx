@@ -11,6 +11,7 @@ import { Products1 } from "../components/Products1.jsx"
 import { Features } from "../components/Features.jsx";
 import DealsOfTheDay from "../pages/Deals/Dealsoftheday.jsx";
 import { Navbar } from "../components/Navbar.jsx";
+import { ProductsSkeleton } from "../features/products/ProductsSkeleton.jsx";
 
 export const Products = () => {
   const navigate = useNavigate();
@@ -70,28 +71,37 @@ export const Products = () => {
     page * limit + limit
   );
 
-  return (
-    <div className=" mx-auto">
+ return (
+    <div className="mx-auto">
+      {/* Navbar is OUTSIDE the loading check, so it never disappears! */}
       <Navbar />
 
-      <Carousel />
-      <Features />
+      {/* If loading is true, show skeleton. Otherwise, show the real page. */}
+      {loading ? (
+        <ProductsSkeleton />
+      ) : (
+        <>
+          <Carousel />
+          <Features />
 
-      <CategoryFilter
-        categories={allCategories}
-        selectedCategories={selectedCategories}
-        onToggle={handleCategoryToggle}
-      />
-      <DealsOfTheDay />
-      <ProductGrid products={currentProducts} onBuyNow={handleBuyNow} />
+          <CategoryFilter
+            categories={allCategories}
+            selectedCategories={selectedCategories}
+            onToggle={handleCategoryToggle}
+          />
+          
+          <DealsOfTheDay />
+          <ProductGrid products={currentProducts} onBuyNow={handleBuyNow} />
 
-      <Pagination
-        page={page}
-        onPrev={() => setPage((p) => p - 1)}
-        onNext={() => setPage((p) => p + 1)}
-        isPrevDisabled={page === 0}
-        isNextDisabled={(page + 1) * limit >= filteredProducts.length}
-      />
+          <Pagination
+            page={page}
+            onPrev={() => setPage((p) => p - 1)}
+            onNext={() => setPage((p) => p + 1)}
+            isPrevDisabled={page === 0}
+            isNextDisabled={(page + 1) * limit >= filteredProducts.length}
+          />
+        </>
+      )}
     </div>
   );
 };

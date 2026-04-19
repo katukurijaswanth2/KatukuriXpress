@@ -15,10 +15,11 @@ export const Navbar = () => {
       try {
         const parsed = JSON.parse(localStorage.getItem(key));
         // Check if it's a valid cart item and not saved for later
-        if (parsed && parsed.id && parsed.title && parsed.price && !parsed.saved) {
+        if (parsed &&parsed.title && !parsed.saved) {
           // Use `count += parsed.quantity` if you want the total sum of all items
           // Use `count += 1` if you just want the number of unique products
-          count += 1; 
+          count += 1;
+          // count += parsed.quantity; 
         }
       } catch {
         // Skip keys that aren't valid JSON
