@@ -17,8 +17,8 @@ function DealCard({ product }) {
         <h3 className="deal-title">{product.title}</h3>
         <p className="deal-description">{product.description}</p>
         <div className="deal-pricing">
-          <span className="deal-old-price">${product.price.toFixed(2)}</span>
-          <span className="deal-new-price">${discountedPrice}</span>
+          <span className="deal-old-price"><i className="fas fa-rupee-sign"></i>{product.price.toFixed(2)}</span>
+          <span className="deal-new-price"><i className="fas fa-rupee-sign"></i>{discountedPrice}</span>
         </div>
         <hr className="deal-divider" />
         <p className="deal-countdown-label">Deal ends in</p>

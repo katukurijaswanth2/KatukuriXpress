@@ -36,7 +36,7 @@ export default function DealsOfTheDay() {
       {error && <p className="deals-error">Error: {error}</p>}
 
       {!loading && !error && (
-        <div className="deals-grid">
+        <div className="deals-grid flex justify-between align-middle gap-20">
           {products.map((product) => (
             <DealCard key={product.id} product={product} />
           ))}

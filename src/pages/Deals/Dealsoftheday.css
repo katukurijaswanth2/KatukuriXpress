@@ -54,7 +54,7 @@
 .deal-card {
   display: flex;
   flex-direction: row;
-  border: 1.5px solid var(--green-border);
+  border: 3px solid var(--green-border);
   border-radius: var(--card-radius);
   background: #fff;
   overflow: hidden;

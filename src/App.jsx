@@ -31,11 +31,14 @@ import { Products1 } from "./components/Products1";
 import { Products } from "./utilities/Products";
 import { SpecificCard } from "./components/SpecificCard";
 import { SignIn} from "../src/features/authontication/SignIn";
+import { CartPage } from "./features/cart/Cartpage";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Products />} />
+  
+        <Route path="/cart" element={<CartPage />}></Route>
         <Route path="/product/:id" element={<SpecificCard />} />
        
 <Route path="/signin" element={<SignIn />} />
