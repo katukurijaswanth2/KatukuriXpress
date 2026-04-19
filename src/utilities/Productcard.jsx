@@ -7,9 +7,9 @@ export const ProductCard = ({ item, onBuyNow }) => {
         <img src={item.thumbnail} alt={item.title} />
       </div>
 
-      <h3 className="title">{item.title}</h3>
+      <h3 className="title-c">{item.title}</h3>
 
-      <p className="category text-xs text-gray-500 uppercase mb-1">
+      <p className="category ">
         {item.category}
       </p>
 

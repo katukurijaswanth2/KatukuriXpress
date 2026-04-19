@@ -1,0 +1,38 @@
+/* ===== PAGINATION CONTAINER ===== */
+.page-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+/* ===== PAGINATION BUTTONS ===== */
+.page-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background-color: #34f257; /* Equivalent to bg-blue-500 */
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for active buttons (Optional but recommended) */
+.page-button:hover:not(:disabled) {
+  background-color: #25eb46; 
+}
+
+/* Automatically applies when the disabled attribute is true */
+.page-button:disabled {
+  background-color: #d1d5db; /* Equivalent to bg-gray-300 */
+  color: #6b7280;            /* Equivalent to text-gray-500 */
+  cursor: not-allowed;
+}
+
+/* ===== PAGINATION TEXT ===== */
+.page-text {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}

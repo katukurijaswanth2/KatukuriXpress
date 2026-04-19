@@ -1,24 +1,23 @@
+import React from 'react';
+import './Pagination.css'; // Make sure the path matches where you save the CSS file
+
 export const Pagination = ({ page, onPrev, onNext, isPrevDisabled, isNextDisabled }) => {
   return (
-    <div className="flex justify-center gap-4 my-5">
+    <div className="page-container">
       <button
         disabled={isPrevDisabled}
         onClick={onPrev}
-        className={`px-4 py-2 rounded font-medium ${
-          isPrevDisabled ? "bg-gray-300 text-gray-500" : "bg-blue-500 text-white"
-        }`}
+        className="page-button"
       >
         Previous
       </button>
 
-      <span className="px-3 py-2">Page {page + 1}</span>
+      <span className="page-text">Page {page + 1}</span>
 
       <button
         disabled={isNextDisabled}
         onClick={onNext}
-        className={`px-4 py-4 rounded font-medium ${
-          isNextDisabled ? "bg-gray-300 text-gray-500" : "bg-blue-500 text-white"
-        }`}
+        className="page-button"
       >
         Next
       </button>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./CartPage.css";
 
 export const CartPage = () => {
@@ -23,7 +24,7 @@ export const CartPage = () => {
     setCartItems(items);
   }, []);
 
-  // ── Helpers ────────────────────────────────────────────────────────
+
   const updateQty = (title, delta) => {
     setCartItems((prev) =>
       prev.map((item) => {
@@ -88,6 +89,7 @@ export const CartPage = () => {
   }
 
   return (
+    <> <Link to ="/">home </Link>
     <div className="cp__page">
       {/* ── LEFT COLUMN ── */}
       <div className="cp__left">
@@ -266,5 +268,6 @@ export const CartPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
