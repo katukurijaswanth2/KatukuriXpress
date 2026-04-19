@@ -16,7 +16,7 @@ export const Pagination = ({ page, onPrev, onNext, isPrevDisabled, isNextDisable
       <button
         disabled={isNextDisabled}
         onClick={onNext}
-        className={`px-4 py-2 rounded font-medium ${
+        className={`px-4 py-4 rounded font-medium ${
           isNextDisabled ? "bg-gray-300 text-gray-500" : "bg-blue-500 text-white"
         }`}
       >

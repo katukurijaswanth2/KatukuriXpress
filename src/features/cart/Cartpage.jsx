@@ -109,6 +109,7 @@ export const CartPage = () => {
             : null;
 
           return (
+            
             <div className="cp__card" key={item.title}>
               {/* Hot Deal badge */}
               <div className="cp__hot-deal">
