@@ -1,0 +1,52 @@
+.nav-direction-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; /* Aligns to the right as per the image */
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.nav-direction-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px; /* Spacing between items */
+  align-items: center;
+}
+
+.nav-direction-item {
+  position: relative;
+}
+
+.nav-direction-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a; /* Dark black for text */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Green color for the active 'Home' link */
+.nav-direction-link.active {
+  color: #5cb85c; 
+}
+
+.nav-direction-link:hover {
+  color: #5cb85c;
+}
+
+.nav-direction-icon {
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+/* Optional: Slight adjustment for the SVG stroke on hover */
+.nav-direction-link:hover .nav-direction-icon svg path {
+  stroke: #5cb85c;
+}

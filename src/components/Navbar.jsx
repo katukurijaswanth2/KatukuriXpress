@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import {NavDir} from "./NavDir";
 
 export const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -50,7 +51,7 @@ export const Navbar = () => {
     };
   }, []);
 
-  return (
+  return (<>
     <header className="navbar">
       {/* LEFT - Call Section */}
       <div className="navbar__left">
@@ -93,6 +94,9 @@ export const Navbar = () => {
           </span>
         </button>
       </div>
+  
     </header>
+    <NavDir />
+    </>
   );
 };
