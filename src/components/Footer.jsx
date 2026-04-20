@@ -78,7 +78,7 @@ export const Footer=()=> {
         <div>
           <div className="footer-logo-wrap">
             <AtaraxisLogo />
-            <span className="footer-logo-text">ATARAXIS</span>
+            <span className="footer-logo-text">KatukuriXpress</span>
           </div>
 
           <p className="footer-tagline">

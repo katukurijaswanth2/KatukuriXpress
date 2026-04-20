@@ -10,7 +10,7 @@ import { Pagination } from "./Pagination";
 import { Products1 } from "../components/Products1.jsx"
 import { Features } from "../components/Features.jsx";
 import DealsOfTheDay from "../pages/Deals/Dealsoftheday.jsx";
-import { Navbar } from "../components/Navbar.jsx";
+
 import { ProductsSkeleton } from "../features/products/ProductsSkeleton.jsx";
 
 export const Products = () => {
@@ -74,7 +74,7 @@ export const Products = () => {
  return (
     <div className="mx-auto">
       {/* Navbar is OUTSIDE the loading check, so it never disappears! */}
-      <Navbar />
+    
 
       {/* If loading is true, show skeleton. Otherwise, show the real page. */}
       {loading ? (

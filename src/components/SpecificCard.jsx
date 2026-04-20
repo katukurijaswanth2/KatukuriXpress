@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 import "./SpecificCard.css";
 import { SpecificCardSkeleton } from "../features/products/SpecificCardSkeleton";
-import { Navbar } from "./Navbar";
+
 import { AllProducts } from "../pages/AllProducts";
 
 export const SpecificCard = () => {
@@ -77,7 +77,7 @@ window.dispatchEvent(cartUpdateEvent);
 
   return (
     <>
-      <Navbar />
+   
       <Link to="/">back
       </Link>
 

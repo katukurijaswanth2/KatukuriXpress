@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
-import { Navbar} from "../../components/Navbar";
+
 import { EmptyCart } from "./EmptyCart";
 import { CartList } from "./CartList";
 import { PriceSummary } from "./PriceSummary";
@@ -74,7 +74,7 @@ export const CartPage = () => {
 
   return (
     <>
-      <Navbar />
+    
       <div className="cp__page">
         <CartList
           cartItems={cartItems}
