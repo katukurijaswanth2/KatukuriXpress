@@ -9,7 +9,7 @@ import { ProductGrid } from "./ProductGrid.jsx";
 import { Pagination } from "./Pagination";
 import { Products1 } from "../components/Products1.jsx"
 import { Features } from "../components/Features.jsx";
-import DealsOfTheDay from "../pages/Deals/Dealsoftheday.jsx";
+import DealsOfTheDay from "../pages/Deals/DealsOfTheDay.jsx";
 
 import { ProductsSkeleton } from "../features/products/ProductsSkeleton.jsx";
 

@@ -24,6 +24,30 @@ export default function DealsOfTheDay() {
         setLoading(false);
       });
   }, []);
+// 
+  // useEffect(() => {
+
+  //   async function fetchData() {
+  //     try {
+  //       // Call first API
+  //       const response1 = await axios.get("https://dummyjson.com/products/1");
+
+  //       // Call second API
+  //       const response2 = await axios.get("https://dummyjson.com/products/2");
+
+  //       // Store both results
+  //       setProducts([response1.data, response2.data]);
+
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+
+  //     setLoading(false);
+  //   }
+
+  //   fetchData();
+
+  // }, []);
 
   return (
     <section className="deals-section">
