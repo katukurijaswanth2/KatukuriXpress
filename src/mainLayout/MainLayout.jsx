@@ -4,7 +4,7 @@ import { Products } from "../utilities/Products";
 import { Routes, Route } from "react-router-dom";
 
 import { AllProducts } from "../pages/AllProducts";
-import { CartPage } from "../features/cart/Cartpage";
+import { CartPage } from "../features/cart/CartPage.jsx";
 import { SpecificCard } from "../components/SpecificCard";
 import { SignIn } from "../features/authontication/SignIn";
 import { About } from "../pages/about/About";
