@@ -1,4 +1,4 @@
-import { CategoryFilterItem } from "./CategoryFilterItem";
+import { CategoryFilterItem } from "./CategoryfilterItem";
 import "./CategoryFilter.css";
 import { SectionHeader } from "../components/SectionHeader";
 

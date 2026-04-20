@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { ProductGrid } from "../utilities/Productgrid";
+import { ProductGrid } from "../utilities/ProductGrid";
 import { Navbar } from "../components/Navbar";
 import { useLocation, useNavigate } from "react-router-dom";
 
