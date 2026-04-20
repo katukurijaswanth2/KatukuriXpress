@@ -1,8 +1,9 @@
 import React from "react";
 import "./Skeleton.css";
 
+
 export const SpecificCardSkeleton = () => {
-  return (
+  return (<>
     <div className="skeleton-container">
       
       {/* LEFT - IMAGES (Mimicking your layout) */}
@@ -32,5 +33,6 @@ export const SpecificCardSkeleton = () => {
       </div>
       
     </div>
+    </>
   );
 };

@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 import "./SpecificCard.css";
 import { SpecificCardSkeleton } from "../features/products/SpecificCardSkeleton";
+import { Navbar } from "./Navbar";
+import { AllProducts } from "../pages/AllProducts";
 
 export const SpecificCard = () => {
   const { id } = useParams();
@@ -75,7 +77,7 @@ window.dispatchEvent(cartUpdateEvent);
 
   return (
     <>
-      <Link to="/" className="back-link">back</Link>
+      <Navbar />
 
       <div className="specific-card-page">
         <div className="product-container">
@@ -195,6 +197,7 @@ window.dispatchEvent(cartUpdateEvent);
           </div>
         )}
       </div>
+      <AllProducts />
     </>
   );
 };

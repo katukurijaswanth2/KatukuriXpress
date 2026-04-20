@@ -159,7 +159,7 @@
 
 /* Offer box */
 .offer-box {
-  background-color: #fdf2f8;
+   background: #3a8c3f;
   border: 1px solid #fbcfe8;
   padding: 1rem;
   border-radius: 0.375rem;
@@ -167,13 +167,13 @@
 
 .offer-box p {
   font-size: 0.875rem;
-  color: #9d174d;
+  background: #3a8c3f;
   margin: 0;
 }
 
 /* Add to cart button */
 .add-to-cart-btn {
-  background-color: #db2777;
+  background: #42a248;
   color: #ffffff;
   padding: 0.75rem;
   border: none;
@@ -186,7 +186,7 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #be185d;
+   background: #255b28;
 }
 
 /* Cart message */
@@ -227,7 +227,7 @@
 }
 
 .pincode-input:focus {
-  box-shadow: 0 0 0 2px #f9a8d4;
+  box-shadow: 0 0 0 2px #14b422;
 }
 
 .check-btn {

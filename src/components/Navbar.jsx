@@ -6,6 +6,15 @@ export const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
   const [wishlistCount] = useState(0);
   const navigate = useNavigate();
+  const alertu = () => {
+  const value = localStorage.getItem("user"); // use string key
+
+  if (value) {
+    alert("User already exists here");
+  } else {
+    navigate("/signin");
+  }
+};
 
   // Function to calculate items in cart
   const calculateCartCount = () => {
@@ -61,11 +70,11 @@ export const Navbar = () => {
 
       {/* RIGHT - Icons */}
       <div className="navbar__right">
-        <button className="navbar__icon-btn" aria-label="Search">
+        {/* <button className="navbar__icon-btn" aria-label="Search">
           <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
+        </button> */}
 
-        <button className="navbar__icon-btn" aria-label="Account">
+        <button className="navbar__icon-btn" aria-label="Account" onClick={alertu}>
           <i className="fa-regular fa-user"></i>
         </button>
 
