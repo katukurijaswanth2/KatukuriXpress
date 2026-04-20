@@ -1,4 +1,4 @@
-import { SectionHeader } from "../components/SectionHeader";
+import { SectionHeader } from "../components/SectionHeader.jsx";
 import { ProductCard } from "./ProductCard";
 
 export const ProductGrid = ({ products, onBuyNow }) => {
