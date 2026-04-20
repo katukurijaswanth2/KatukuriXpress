@@ -1,0 +1,117 @@
+:root {
+  --about-green: #2d6a4f;
+  --about-orange: #f97316;
+  --about-white: #ffffff;
+  --about-gray: #f4f4f4;
+  --about-text: #1a1a1a;
+}
+
+.about_container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--about-text);
+  line-height: 1.6;
+}
+
+.about_header_section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about_title {
+  font-size: 3rem;
+  color: var(--about-green);
+  margin-bottom: 10px;
+}
+
+.about_brand {
+  color: var(--about-orange);
+}
+
+.about_subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.about_content_grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .about_content_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about_section_heading {
+  color: var(--about-green);
+  border-left: 5px solid var(--about-orange);
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.about_description {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.about_stats_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about_stat_card {
+  background-color: var(--about-white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-right: 4px solid var(--about-green);
+  transition: transform 0.3s ease;
+}
+
+.about_stat_card:hover {
+  transform: translateX(-10px);
+  border-right-color: var(--about-orange);
+}
+
+.about_stat_number {
+  color: var(--about-orange);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.about_stat_label {
+  margin: 0;
+  font-weight: bold;
+  color: var(--about-green);
+}
+
+.about_recruiter_note {
+  background: linear-gradient(135deg, var(--about-green), #1b4332);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(45, 106, 79, 0.3);
+}
+
+.about_note_title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about_note_text {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}

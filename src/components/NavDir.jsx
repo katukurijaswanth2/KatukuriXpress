@@ -1,22 +1,24 @@
 import React from 'react';
 import './NavDir.css';
+import { Link } from 'react-router-dom';
 
 export const NavDir = () => {
   const navItems = [
-    { name: 'Home', hasDropdown: true },
-    { name: 'About', hasDropdown: false },
-    { name: 'Shop', hasDropdown: true },
-    { name: 'Blog', hasDropdown: true },
-    { name: 'Pages', hasDropdown: true },
-    { name: 'Contact', hasDropdown: false },
+    { name: 'Home', hasDropdown: true , path: "/"},
+    { name: 'About', hasDropdown: false,path :"/about" },
+  
+    { name: 'products', hasDropdown: true, path: "/products" },
+   
+    
   ];
 
   return (
+
     <nav className="nav-direction-container">
       <ul className="nav-direction-list">
         {navItems.map((item, index) => (
           <li key={index} className="nav-direction-item">
-            <a href="#" className={`nav-direction-link ${item.name === 'Home' ? 'active' : ''}`}>
+            <Link className={`nav-direction-link ${item.name === 'Home' ? 'active' : ''}`} to={item.path}>
               {item.name}
               {item.hasDropdown && (
                 <span className="nav-direction-icon">
@@ -37,7 +39,7 @@ export const NavDir = () => {
                   </svg>
                 </span>
               )}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

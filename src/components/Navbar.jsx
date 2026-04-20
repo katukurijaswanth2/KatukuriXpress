@@ -52,6 +52,7 @@ export const Navbar = () => {
   }, []);
 
   return (<>
+  <div className="nav-parent">
     <header className="navbar">
       {/* LEFT - Call Section */}
       <div className="navbar__left">
@@ -94,9 +95,10 @@ export const Navbar = () => {
           </span>
         </button>
       </div>
-  
+ 
     </header>
     <NavDir />
+   </div>
     </>
   );
 };

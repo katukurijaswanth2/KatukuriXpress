@@ -7,12 +7,14 @@ import { AllProducts } from "../pages/AllProducts";
 import { CartPage } from "../features/cart/Cartpage";
 import { SpecificCard } from "../components/SpecificCard";
 import { SignIn } from "../features/authontication/SignIn";
+import { About } from "../pages/about/About";
 
 export const MainLayout = () => {
     return (
         <>
             <Navbar />
             <Routes>
+                <Route path="/about" element={<About />} />
                 <Route path="/" element={<Products />} />
                 <Route path="/products" element={<AllProducts />} />
                 <Route path="/cart" element={<CartPage />} />

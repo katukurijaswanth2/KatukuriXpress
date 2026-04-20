@@ -2,7 +2,8 @@
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: flex-end; /* Aligns to the right as per the image */
+  justify-content: center;
+  align-items: center; 
   background-color: #ffffff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
