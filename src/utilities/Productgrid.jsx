@@ -8,7 +8,6 @@ export const ProductGrid = ({ products, onBuyNow }) => {
         title="Featured Products"
         subtitle="Visit our shop to see amazing products"
       />
-
       <div className="container">
         {products.map((item) => (
           <ProductCard key={item.id} item={item} onBuyNow={onBuyNow} />
