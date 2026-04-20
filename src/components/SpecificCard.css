@@ -61,16 +61,16 @@
 }
 
 .thumbnail-img:hover {
-  border-color: #f9a8d4;
+  border-color: #f2b818;
 }
 
 .thumbnail-img.active {
-  border-color: #db2777;
+  border-color: #046520;
 }
 
 .main-image-wrapper {
   flex: 1;
-  background-color: #f9fafb;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -252,7 +252,14 @@
   color: #4b5563;
   margin-top: 0.75rem;
 }
+.extra-info-returns{
+  padding: 5px;
+  background-color:#018749;
+  color: white;
+text-transform: capitalize;
+font-weight: 600;
 
+}
 /* Reviews section */
 .reviews-section {
   max-width: 1100px;

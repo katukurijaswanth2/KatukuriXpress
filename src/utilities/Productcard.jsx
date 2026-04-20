@@ -1,6 +1,8 @@
 export const ProductCard = ({ item, onBuyNow }) => {
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
-    <div className="card" key={item.id}>
+    // Removed the key prop from here
+    <div className="card"> 
       <span className="badge">NEW</span>
 
       <div className="image-container">
@@ -17,9 +19,16 @@ export const ProductCard = ({ item, onBuyNow }) => {
         <span className="old">₹{item.price + 50}</span>
         <span className="new">₹{item.price}</span>
       </div>
+      <button 
+        type="button"
+        className="productBtn buy-btn" 
+        onClick={() =>{ onBuyNow(item.id),
+          scrollToTop();
+        }}
+       
 
-      <button className="buy-btn" onClick={() => onBuyNow(item.id)}>
-        BUY NOW →
+      >
+        <i className="fa-solid fa-bag-shopping" style={{ color: '#008000' }}></i> Buy
       </button>
     </div>
   );

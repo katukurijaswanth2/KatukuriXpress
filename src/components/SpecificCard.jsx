@@ -78,6 +78,8 @@ window.dispatchEvent(cartUpdateEvent);
   return (
     <>
       <Navbar />
+      <Link to="/">back
+      </Link>
 
       <div className="specific-card-page">
         <div className="product-container">
@@ -143,7 +145,7 @@ window.dispatchEvent(cartUpdateEvent);
 
             {/* Offer */}
             <div className="offer-box">
-              <p>🎁 Free gift on orders above ₹599</p>
+              <p className="flex justify-center align-middle text-[white] text-bold">Free gift on orders above ₹599</p>
             </div>
 
             {/* Button */}
@@ -171,8 +173,8 @@ window.dispatchEvent(cartUpdateEvent);
 
             {/* Extra */}
             <div className="extra-info">
-              <span>✔ Genuine Product</span>
-              <span>↩ Easy Returns</span>
+              <span className="extra-info-returns">Genuine Product</span>
+              <span className=" extra-info-returns"> Easy Returns</span>
             </div>
           </div>
         </div>

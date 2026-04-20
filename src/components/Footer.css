@@ -1,0 +1,143 @@
+.footer-root {
+  background-color: #0d3d35;
+  color: #e0ede9;
+  font-family: Georgia, serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-geo-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 420px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.footer-main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 3rem 2.5rem;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-text {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #e0ede9;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #a8c5bb;
+  max-width: 260px;
+  margin-bottom: 2rem;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.footer-social-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #2a6659;
+  border-radius: 6px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #a8c5bb;
+  transition: border-color 0.2s;
+  padding: 0;
+}
+
+.footer-social-btn:hover {
+  border-color: #d4a24c;
+}
+
+.footer-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #2a6659;
+  padding: 10px 18px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #e0ede9;
+  cursor: pointer;
+  border-radius: 4px;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  transition: border-color 0.2s;
+}
+
+.footer-back-btn:hover {
+  border-color: #d4a24c;
+}
+
+.footer-nav-title {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #6a9e92;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-item {
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav-link {
+  font-size: 14px;
+  color: #a8c5bb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link.footer-nav-link--active {
+  color: #e0ede9;
+}
+
+.footer-nav-link.footer-nav-link--active {
+  text-decoration: underline;
+}
+
+.footer-copyright-bar {
+  background-color: #d4a24c;
+  padding: 14px 3rem;
+  text-align: center;
+}
+
+.footer-copyright-text {
+  font-size: 12px;
+  color: #7a4e10;
+  letter-spacing: 0.5px;
+  margin: 0;
+}

@@ -33,6 +33,7 @@ import { SpecificCard } from "./components/SpecificCard";
 import { SignIn} from "../src/features/authontication/SignIn";
 import { CartPage } from "./features/cart/Cartpage";
 import { AllProducts } from "./pages/AllProducts";
+// import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +46,7 @@ function App() {
 <Route path="/signin" element={<SignIn />} />
 
       </Routes>
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
