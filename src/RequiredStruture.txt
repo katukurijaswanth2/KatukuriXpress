@@ -1,0 +1,101 @@
+src/
+├── assets/
+│   ├── images/
+│   │   ├── hero.png
+│   │   ├── img1.jpg
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   └── js/
+│       └── employee.js
+
+├── app/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── routes.jsx   (from appRouterDom)
+│   └── store/       (redux here)
+│       └── index.js
+
+├── layouts/
+│   └── MainLayout.jsx
+
+├── shared/   👈 reusable across app
+│   ├── components/
+│   │   ├── Navbar/
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Navbar.css
+│   │   ├── Footer/
+│   │   ├── Loader/
+│   │   ├── Carousel/
+│   │   ├── SectionHeader/
+│   │   └── NavDir/
+│   │
+│   ├── ui/   👈 generic UI (cards, buttons etc.)
+│   │   ├── SpecificCard/
+│   │   ├── ProductCard/
+│   │   ├── Pagination/
+│   │   └── StarRating/
+│   │
+│   └── hooks/
+│       └── (move coustomHocks here)
+
+├── features/
+│   ├── auth/
+│   │   ├── Login.jsx
+│   │   ├── Login.css
+│   │   ├── SignIn.jsx
+│   │   └── SignIn.css
+│
+│   ├── cart/
+│   │   ├── components/
+│   │   │   ├── CartCard.jsx
+│   │   │   ├── CartList.jsx
+│   │   │   ├── QtySelector.jsx
+│   │   │   ├── PriceSummary.jsx
+│   │   │   └── StarRating.jsx
+│   │   ├── pages/
+│   │   │   └── CartPage.jsx
+│   │   └── styles/
+│   │       └── CartPage.css
+│
+│   ├── products/
+│   │   ├── components/
+│   │   │   ├── ProductGrid.jsx
+│   │   │   ├── Products.jsx
+│   │   │   └── ProductCard.jsx
+│   │   ├── skeleton/
+│   │   │   ├── ProductsSkeleton.jsx
+│   │   │   └── SpecificCardSkeleton.jsx
+│   │   └── styles/
+│   │       └── Skeleton.css
+│
+│   └── deals/
+│       ├── components/
+│       │   ├── DealCard.jsx
+│       │   ├── CountdownTimer.jsx
+│       │   └── StarRating.jsx
+│       ├── pages/
+│       │   └── DealsOfTheDay.jsx
+│       └── styles/
+│           └── DealsOfTheDay.css
+
+├── pages/   👈 route-level pages only
+│   ├── Home.jsx
+│   ├── About/
+│   │   ├── About.jsx
+│   │   └── About.css
+│   └── AllProducts.jsx
+
+├── utils/   👈 helpers, filters
+│   ├── category/
+│   │   ├── CategoryFilter.jsx
+│   │   ├── CategoryFilter.css
+│   │   └── CategoryFilterItem.jsx
+│
+├── styles/
+│   ├── App.css
+│   └── index.css
+
+└── test-or-practice/   👈 your "exam"
+    ├── ButtonComp.jsx
+    ├── List.jsx
+    └── Lstorage.jsx

@@ -4,7 +4,7 @@ import { CartCard } from "./CartCard";
 export const CartList = ({ cartItems, onUpdateQty, onRemove, onSaveForLater }) => {
   return (
     <div className="cp__left">
-      <DeliveryRow />
+      {/* <DeliveryRow /> */}
       {cartItems.map((item) => (
         <CartCard
           key={item.title}
