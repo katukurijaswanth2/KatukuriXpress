@@ -153,5 +153,5 @@ GitHub: [@katukurijaswanth2](https://github.com/katukurijaswanth2)
 ---
 
 <div align="center">
-  <sub>Built with ❤️ using React + Vite</sub>
+  <sub> JASWANTH KATUKURI 🤖 FULLSTACK DEV</sub>
 </div>
