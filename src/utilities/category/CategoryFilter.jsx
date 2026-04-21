@@ -1,7 +1,6 @@
-import { CategoryFilterItem } from "./category/CategoryFilterItem";
+import{CategoryFilterItem} from "./CategoryFilterItem"
 import "./CategoryFilter.css";
-import { SectionHeader } from "../shared/components/SectionHeader";
-
+import { SectionHeader } from "../../shared/ui/SectionHeader";
 export const CategoryFilter = ({ categories, selectedCategories, onToggle }) => {
   return (
     <>
@@ -18,6 +17,7 @@ export const CategoryFilter = ({ categories, selectedCategories, onToggle }) => 
             isSelected={selectedCategories.includes(category)}
             onToggle={onToggle}
           />
+       
         ))}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import StarRating from "./StarRating";
 import CountdownTimer from "./CountdownTimer";
 
-function DealCard({ product }) {
+export const DealCard=({ product })=> {
   const discountedPrice = (
     product.price * (1 - product.discountPercentage / 100)
   ).toFixed(2);
@@ -28,4 +28,3 @@ function DealCard({ product }) {
   );
 }
 
-export default DealCard;

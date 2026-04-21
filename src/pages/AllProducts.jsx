@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { ProductGrid } from "../utilities/ProductGrid.jsx";
+import { ProductGrid } from "../features/products/components/ProductGrid.jsx";
 import { useNavigate } from "react-router-dom";
 
 export const AllProducts = () => {

@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 add this
 import "./Product.css";
-import { useNavigate } from "react-router-dom";
 import { Carousel } from "../../../shared/components/Carousel.jsx";
 import { Loader } from "../../../shared/components/Loader.jsx";
-import { CategoryFilter } from "../../../utilities/CategoryFilter.jsx";
+import { CategoryFilter } from "../../../utilities/category/CategoryFilter.jsx";
 import { ProductGrid } from "./ProductGrid.jsx";
 import { Pagination } from "../../../shared/ui/Pagination.jsx";
-import { Products1 } from "../../../shared/components/Products1.jsx"
+import { Products1 } from "../../../shared/components/Products1.jsx";
 import { Features } from "../../../shared/components/Features.jsx";
-import DealsOfTheDay from "../../Deals/DealsOfTheDay.js";
-
 import { ProductsSkeleton } from "../skeleton/ProductsSkeleton.jsx";
+import { DealsOfTheDay } from "../../Deals/pages/DealsOfTheDay.jsx";
+
 
 export const Products = () => {
   const navigate = useNavigate();
@@ -36,15 +36,7 @@ export const Products = () => {
       });
   }, []);
 
-  if (loading) return (<>
-  
-  <div className="Loader_home h-full w-full flex justify-center align-middle">
- <Loader />
-  </div>
-  
- 
-  
-  </>);
+
 
   // Derive unique categories
   const allCategories = [

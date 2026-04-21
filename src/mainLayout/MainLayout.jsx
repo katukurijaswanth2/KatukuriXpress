@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import {Footer} from "../shared/components/Footer.jsx"
 import { AllProducts } from "../pages/AllProducts.jsx";
 import { CartPage } from "../features/cart/CartPage.jsx";
-import { SpecificCard } from "../shared/components/SpecificCard.jsx";
+import {SpecificCard} from "../shared/ui/SpecificCard.jsx"
 import { SignIn } from "../features/authontication/SignIn.jsx";
 import { About } from "../pages/about/About";
 import { useEffect, useState } from "react";
