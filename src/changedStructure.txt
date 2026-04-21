@@ -1,0 +1,98 @@
+├── app/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── appRouterDom/
+├── assets/
+│   ├── javaScript/
+│   │   └── employee.js
+│   ├── hero.png
+│   ├── img1.jpg
+│   ├── react.svg
+│   └── vite.svg
+├── coustomHocks/
+├── features/
+│   ├── Deals/
+│   │   ├── pages/
+│   │   │   ├── DealsOfTheDay.css
+│   │   │   └── DealsOfTheDay.jsx
+│   │   ├── CountdownTimer.jsx
+│   │   ├── DealCard.jsx
+│   │   └── StarRating.jsx
+│   ├── authontication/
+│   │   ├── Login.css
+│   │   ├── Login.jsx
+│   │   ├── SignIn.css
+│   │   └── SignIn.jsx
+│   ├── cart/
+│   │   ├── components/
+│   │   │   ├── CardActions.jsx
+│   │   │   ├── CartCard.jsx
+│   │   │   ├── CartList.jsx
+│   │   │   ├── CartParent.jsx
+│   │   │   ├── DeliveryRow.jsx
+│   │   │   ├── EmptyCart.jsx
+│   │   │   ├── PriceDisplay.jsx
+│   │   │   ├── PriceSummary.jsx
+│   │   │   ├── QtySelector.jsx
+│   │   │   └── StarRating.jsx
+│   │   ├── CartPage.css
+│   │   └── CartPage.jsx
+│   └── products/
+│       ├── components/
+│       │   ├── Product.css
+│       │   ├── ProductCard.jsx
+│       │   ├── ProductGrid.jsx
+│       │   └── Products.jsx
+│       └── skeleton/
+│           ├── ProductsSkeleton.jsx
+│           ├── Skeleton.css
+│           └── SpecificCardSkeleton.jsx
+├── mainLayout/
+│   └── MainLayout.jsx
+├── pages/
+│   ├── about/
+│   │   ├── About.css
+│   │   └── About.jsx
+│   ├── AllProducts.jsx
+│   └── Home.jsx
+├── reduX/
+├── shared/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   │   ├── NavDir.css
+│   │   │   ├── NavDir.jsx
+│   │   │   ├── Navbar.css
+│   │   │   └── Navbar.jsx
+│   │   ├── Carousel.css
+│   │   ├── Carousel.jsx
+│   │   ├── Ecom.jsx
+│   │   ├── Features.css
+│   │   ├── Features.jsx
+│   │   ├── Footer.css
+│   │   ├── Footer.jsx
+│   │   ├── Loader.css
+│   │   ├── Loader.jsx
+│   │   ├── Product1.css
+│   │   └── Products1.jsx
+│   └── ui/
+│       ├── Pagination.css
+│       ├── Pagination.jsx
+│       ├── SectionHeader.css
+│       ├── SectionHeader.jsx
+│       ├── SpecificCard.css
+│       └── SpecificCard.jsx
+├── test-or-practice/
+│   ├── ButtonComp.jsx
+│   ├── List.jsx
+│   └── Lstorage.jsx
+├── utilities/
+│   └── category/
+│       ├── Category.css
+│       ├── CategoryFilter.css
+│       ├── CategoryFilter.jsx
+│       ├── CategoryFilterItem.css
+│       └── CategoryFilterItem.jsx
+├── RequiredStruture.txt
+└── structure.txt
