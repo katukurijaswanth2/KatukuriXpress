@@ -69,3 +69,19 @@
 font-size: 1rem;
   font-weight: 700;
 }
+@media (max-width: 480px){
+
+  .filter-item{
+    max-width: 8rem;
+    
+
+   
+  }
+  .checkbox-input{
+    /* color: aliceblue; */
+  }
+  .category-label{
+    font-size: 11px;
+    /* color: #ffffff; */
+  }
+}

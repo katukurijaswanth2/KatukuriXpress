@@ -36,7 +36,15 @@ export const Products = () => {
       });
   }, []);
 
-  if (loading) return <Loader />;
+  if (loading) return (<>
+  
+  <div className="Loader_home h-full w-full flex justify-center align-middle">
+ <Loader />
+  </div>
+  
+ 
+  
+  </>);
 
   // Derive unique categories
   const allCategories = [

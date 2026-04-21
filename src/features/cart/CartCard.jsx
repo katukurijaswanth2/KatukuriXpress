@@ -37,9 +37,9 @@ const [date, setDate] = useState(() => {
           <div className="cp__rating-row">
             <StarRating rating={item.rating} />
             <span className="cp__rating-val">{item.rating}</span>
-            <span className="cp__assured">
+            {/* <span className="cp__assured">
               <i className="fa-solid fa-shield-halved"></i> Assured
-            </span>
+            </span> */}
           </div>
 
           {/* Qty + Price */}

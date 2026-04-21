@@ -1,7 +1,14 @@
 /* ========================================
    CartPage.css  — Flipkart-style Cart UI
    ======================================== */
+:root {
+  --green: #347433;
+  --green-light: #e8f5e9;
+--orange:#FF6F3C;
+  --yellow:#FFC107;
 
+  --card-radius: 14px;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -288,11 +295,12 @@
   cursor: pointer;
   font-size: 13px;
   font-weight: 500;
-  color: #555;
+  color: #ffffff;
   padding: 14px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--green);
   gap: 6px;
   border-right: 1px solid #f0f0f0;
   transition: background 0.15s, color 0.15s;
@@ -479,7 +487,7 @@
 
 .cp__shop-btn {
   margin-top: 8px;
-  background: #2874f0;
+background-color: var(--orange);
   color: #fff;
   text-decoration: none;
   padding: 12px 32px;
@@ -528,3 +536,17 @@
     border-right: none;
   }
 }
+@media (max-width: 480px) {
+  .cp__card{
+    min-width: 375px;
+    
+  }
+  .cp__page{
+    padding: 0;
+  }
+.cp__left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}}

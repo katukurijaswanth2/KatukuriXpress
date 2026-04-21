@@ -42,3 +42,15 @@
   color: #666;
   margin: 0;
 }
+@media (max-width: 480px){
+  .feature-item{
+    width: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 50px;
+ 
+    
+  }
+  
+}
