@@ -8,11 +8,20 @@ import { CartPage } from "../features/cart/CartPage.jsx";
 import { SpecificCard } from "../components/SpecificCard";
 import { SignIn } from "../features/authontication/SignIn";
 import { About } from "../pages/about/About";
+import { useEffect, useState } from "react";
 
 export const MainLayout = () => {
+    const [showLayout, setLayout]=useState(false);
+    useEffect(()=>{
+        const timeru= setTimeout(()=>{
+            setLayout(true);
+        },3000);
+            return () => clearTimeout(timeru); 
+    },[]);
     return (
         <>
-            <Navbar />
+        {showLayout && <Navbar />}
+           
             <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/" element={<Products />} />
@@ -21,7 +30,7 @@ export const MainLayout = () => {
                 <Route path="/product/:id" element={<SpecificCard />} />
                 <Route path="/signin" element={<SignIn />} />
             </Routes>
-            <Footer />
+            {showLayout && <Footer />}
         </>
     );
 };
