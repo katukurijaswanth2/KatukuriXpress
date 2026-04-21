@@ -1,6 +1,6 @@
-import { CategoryFilterItem } from "./CategoryFilterItem";
+import { CategoryFilterItem } from "./category/CategoryFilterItem";
 import "./CategoryFilter.css";
-import { SectionHeader } from "../components/SectionHeader";
+import { SectionHeader } from "../shared/components/SectionHeader";
 
 export const CategoryFilter = ({ categories, selectedCategories, onToggle }) => {
   return (

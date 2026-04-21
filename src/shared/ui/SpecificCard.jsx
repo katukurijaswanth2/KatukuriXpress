@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Loader } from "./Loader";
+import { Loader } from "../components/Loader";
 import "./SpecificCard.css";
-import { SpecificCardSkeleton } from "../features/products/SpecificCardSkeleton";
+import { SpecificCardSkeleton } from "../../features/products/SpecificCardSkeleton";
 
-import { AllProducts } from "../pages/AllProducts";
+import { AllProducts } from "../../pages/AllProducts";
 
 export const SpecificCard = () => {
   const { id } = useParams();

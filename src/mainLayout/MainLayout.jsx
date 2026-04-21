@@ -1,28 +1,44 @@
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
-import { Products } from "../utilities/Products";
-import { Routes, Route } from "react-router-dom";
 
-import { AllProducts } from "../pages/AllProducts";
+import { Products } from "../features/products/components/Products.jsx";
+import { Routes, Route, useLocation } from "react-router-dom";
+import {Footer} from "../shared/components/Footer.jsx"
+import { AllProducts } from "../pages/AllProducts.jsx";
 import { CartPage } from "../features/cart/CartPage.jsx";
-import { SpecificCard } from "../components/SpecificCard";
-import { SignIn } from "../features/authontication/SignIn";
+import { SpecificCard } from "../shared/components/SpecificCard.jsx";
+import { SignIn } from "../features/authontication/SignIn.jsx";
 import { About } from "../pages/about/About";
 import { useEffect, useState } from "react";
+import { Navbar } from "../shared/components/Navbar/Navbar.jsx";
 
 export const MainLayout = () => {
-    const [showLayout, setLayout]=useState(false);
-    useEffect(()=>{
-        const timeru= setTimeout(()=>{
-            setLayout(true);
-        },3000);
-            return () => clearTimeout(timeru); 
-    },[]);
+    const [showNavbar, setShowNavbar] = useState(false);
+    const [showFooter, setShowFooter] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        setShowNavbar(false);
+        setShowFooter(false);
+
+        const navTimer = setTimeout(() => {
+            setShowNavbar(true);
+        }, 1000); 
+
+        const footerTimer = setTimeout(() => {
+            setShowFooter(true);
+        }, 3000); 
+
+        return () => {
+            clearTimeout(navTimer);    
+            clearTimeout(footerTimer);
+        };
+    }, [location.pathname]);
+
     return (
-        <>
-        {showLayout && <Navbar />}
-           
-            <Routes>
+        <> 
+
+            {/* {showNavbar && <Navbar />}     */}
+            <Navbar />
+            <Routes>   
                 <Route path="/about" element={<About />} />
                 <Route path="/" element={<Products />} />
                 <Route path="/products" element={<AllProducts />} />
@@ -30,7 +46,7 @@ export const MainLayout = () => {
                 <Route path="/product/:id" element={<SpecificCard />} />
                 <Route path="/signin" element={<SignIn />} />
             </Routes>
-            {showLayout && <Footer />}
+            {showFooter && <Footer />}       {/* ✅ separate state */}
         </>
     );
 };

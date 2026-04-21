@@ -1,4 +1,4 @@
-import { SectionHeader } from "../components/SectionHeader.jsx";
+import { SectionHeader } from "../shared/ui/SectionHeader.jsx";
 import { ProductCard } from "./ProductCard";
 
 export const ProductGrid = ({ products, onBuyNow }) => {
@@ -8,6 +8,7 @@ export const ProductGrid = ({ products, onBuyNow }) => {
         title="Featured Products"
         subtitle="Visit our shop to see amazing products"
       />
+      
       <div className="container">
         {products.map((item) => (
           <ProductCard key={item.id} item={item} onBuyNow={onBuyNow} />

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./DealsOfTheDay.css";
-import { SectionHeader } from "../../components/SectionHeader";
-import { Loader } from "../../components/Loader";
-import DealCard from "./DealCard";
+
+import { Loader } from "../../shared/components/Loader";
+import {DealCard} from "../DealCard";
+import { SectionHeader } from "../../../shared/ui/SectionHeader";
 
 export default function DealsOfTheDay() {
   const [products, setProducts] = useState([]);
@@ -56,9 +57,10 @@ export default function DealsOfTheDay() {
         subtitle="Handpicked savings, gone by midnight"
       />
 
+    
       {loading && <Loader />}
       {error && <p className="deals-error">Error: {error}</p>}
-
+<DealCard />
       {!loading && !error && (
         <div className="deals-grid">
           {products.map((product) => (

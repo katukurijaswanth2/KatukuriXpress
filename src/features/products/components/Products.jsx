@@ -2,16 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
-import { Carousel } from "../components/Carousel.jsx";
-import { Loader } from "../components/Loader.jsx";
-import { CategoryFilter } from "./CategoryFilter.jsx";
+import { Carousel } from "../../../shared/components/Carousel.jsx";
+import { Loader } from "../../../shared/components/Loader.jsx";
+import { CategoryFilter } from "../../../utilities/CategoryFilter.jsx";
 import { ProductGrid } from "./ProductGrid.jsx";
-import { Pagination } from "./Pagination";
-import { Products1 } from "../components/Products1.jsx"
-import { Features } from "../components/Features.jsx";
-import DealsOfTheDay from "../pages/Deals/DealsOfTheDay.jsx";
+import { Pagination } from "../../../shared/ui/Pagination.jsx";
+import { Products1 } from "../../../shared/components/Products1.jsx"
+import { Features } from "../../../shared/components/Features.jsx";
+import DealsOfTheDay from "../../Deals/DealsOfTheDay.js";
 
-import { ProductsSkeleton } from "../features/products/ProductsSkeleton.jsx";
+import { ProductsSkeleton } from "../skeleton/ProductsSkeleton.jsx";
 
 export const Products = () => {
   const navigate = useNavigate();

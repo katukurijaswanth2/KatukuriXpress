@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
 
-import { EmptyCart } from "./EmptyCart";
-import { CartList } from "./CartList";
-import { PriceSummary } from "./PriceSummary";
+import { EmptyCart } from "./components/EmptyCart";
+import { CartList } from "./components/CartList";
+import { PriceSummary } from "./components/PriceSummary";
 
 const FEES = 7;
 

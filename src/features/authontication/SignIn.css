@@ -1,3 +1,11 @@
+:root {
+  --primary: #08CB00;
+  --dark: #253900;
+  --black: #000000;
+  --light: #EEEEEE;
+  --green:#25671E;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -15,7 +23,7 @@
 .title {
   font-size: 24px;
   font-weight: 600;
-  color: #2563eb;
+  color: var(--primary);
   position: relative;
   padding-left: 30px;
 }
@@ -26,7 +34,7 @@
   top: 6px;
   width: 14px;
   height: 14px;
-  background: #2563eb;
+  background: var(--primary);
   border-radius: 50%;
 }
 
@@ -73,12 +81,12 @@ label span {
 .input:valid + span {
   top: 2px;
   font-size: 11px;
-  color: #2563eb;
+  color: var(--primary);
 }
 
 /* Button */
 .submit {
-  background: #2563eb;
+  background: var(--primary);
   color: white;
   padding: 10px;
   border-radius: 8px;
@@ -87,7 +95,7 @@ label span {
 }
 
 .submit:hover {
-  background: #1d4ed8;
+  background: var(--dark);
 }
 
 /* Signin text */
@@ -98,7 +106,7 @@ label span {
 }
 
 .signin span {
-  color: #2563eb;
+  color: var(--primary);
   cursor: pointer;
 }
 
