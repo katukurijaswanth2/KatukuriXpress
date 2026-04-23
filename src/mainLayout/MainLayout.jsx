@@ -9,6 +9,7 @@ import { SignIn } from "../features/authontication/SignIn.jsx";
 import { About } from "../pages/about/About";
 import { useEffect, useState } from "react";
 import { Navbar } from "../shared/components/Navbar/Navbar.jsx";
+import { NotErr } from "../shared/ui/NotErr.jsx";
 
 export const MainLayout = () => {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -45,8 +46,12 @@ export const MainLayout = () => {
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/product/:id" element={<SpecificCard />} />
                 <Route path="/signin" element={<SignIn />} />
+               <Route path="*" element ={<NotErr />} />
+               {/* <NotFound name="Jaswanth" onGoHome={() => navigate('/')} /> */}
+               {/* // In your router config
+{ path: '*', element: <NotFound name="Jaswanth" onGoHome={() => navigate('/')} /> } */}
             </Routes>
-            {showFooter && <Footer />}       {/* ✅ separate state */}
+            {showFooter && <Footer />}      
         </>
     );
 };
