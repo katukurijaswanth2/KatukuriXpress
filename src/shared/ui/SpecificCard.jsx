@@ -56,12 +56,12 @@ export const SpecificCard = () => {
       setCartMessage(`"${product.title}" added to cart!`);
     }
     // i want t o create custom event 
-   // 1. Define the event with a specific name
-const cartUpdateEvent = new CustomEvent("cartUpdated");
+    // 1. Define the event with a specific name
+    const cartUpdateEvent = new CustomEvent("cartUpdated");
 
-// 2. Dispatch (fire) the event on the global window object
-// Announce it on the global webpage here
-window.dispatchEvent(cartUpdateEvent);
+    // 2. Dispatch (fire) the event on the global window object
+    // Announce it on the global webpage here
+    window.dispatchEvent(cartUpdateEvent);
 
     setTimeout(() => setCartMessage(""), 2000);
   };
@@ -77,9 +77,9 @@ window.dispatchEvent(cartUpdateEvent);
 
   return (
     <>
-   
-      <Link to="/">back
-      </Link>
+
+      {/* <Link to="/">back
+      </Link> */}
 
       <div className="specific-card-page">
         <div className="product-container">
@@ -145,13 +145,14 @@ window.dispatchEvent(cartUpdateEvent);
 
             {/* Offer */}
             <div className="offer-box">
-              <p className="flex justify-center align-middle text-[white] text-bold">Free gift on orders above ₹599</p>
+              <p className="flex justify-center align-middle text-[white] text-5xl font-bold">Free gift on orders above ₹599</p>
             </div>
 
             {/* Button */}
-            <button onClick={handleAddToCart} className="add-to-cart-btn">
-              Add to Bag
-            </button>
+           <button onClick={handleAddToCart} className="spCard_Btn">
+  <i className="fa-solid fa-bag-shopping" style={{ fontSize: '15px', color: 'white' }}></i>
+  Add to Bag
+</button>
 
             {/* Message */}
             {cartMessage && (

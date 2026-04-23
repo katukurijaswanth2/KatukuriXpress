@@ -313,3 +313,22 @@ font-weight: 600;
   color: #4b5563;
   font-style: italic;
 }
+
+/* button here */
+.spCard_Btn {
+  width: 100%;         
+  height: 54.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  border-radius: 5px;
+  cursor: pointer;}
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103); */
+
+
+/* */
